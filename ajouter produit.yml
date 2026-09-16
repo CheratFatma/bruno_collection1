@@ -25,7 +25,7 @@ runtime:
     - type: before-request
       code: |-
         const stock = Math.floor(Math.random() * 41) + 10;
-        const prix = Math.floor(Math.random() * 81.5) + 20.5;
+        const prix = Math.floor(Math.random() * 82.5) + 20.5;
 
 
         bru.setCollectionVar("stock",stock);
@@ -55,7 +55,7 @@ runtime:
         }
         })
 
-        test("code statut",()=>{
+        test("verifier les codes statut",()=>{
           let tab_code = [201,403];
           expect(tab_code).to.include(res.getStatus());
         })
