@@ -4,13 +4,13 @@ pipeline {
     stages {
         stage('Install Bruno CLI') {
             steps {
-                bat 'npm install -g @usebruno/cli'
+                sh 'npm install -g @usebruno/cli'
             }
         }
 
         stage('Run Bruno Tests') {
             steps {
-                bat '''
+                sh '''
                 bru run --env-file ./collections/collection1/environments/preprod.yml ^
                 --reporter-json results.json ^
                 --reporter-junit results.xml ^
