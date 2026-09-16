@@ -1,0 +1,44 @@
+opencollection: 1.0.0
+
+info:
+  name: collection1
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: id
+      value:
+        type: number
+        data: "1934"
+    - name: role
+      value: admin
+    - name: email
+      value: Selena_Kautzer@hotmail.com
+    - name: password
+      value: RBOxwwzblo7g1mq
+    - name: token
+      value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyLWFwaSIsInN1YiI6MTkzNCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg5NTU0MTkxLCJleHAiOjE3ODk1NTc3OTEsImp0aSI6IjAzYzQ4Njg5MTQ4NGEzODVmNzIwNTg1MTYxNDJmNTE5In0.3984-IBtVg9d2JyIoctcSbTKRwcOMRj2il8RXmyizM0
+    - name: stock
+      value:
+        type: number
+        data: "12"
+    - name: prix
+      value:
+        type: number
+        data: "74.5"
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

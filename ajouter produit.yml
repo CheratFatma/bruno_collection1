@@ -1,0 +1,68 @@
+info:
+  name: ajouter produit
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/public/products"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "{{$randomNamePrefix}}",
+        "description": "{{$randomNamePrefix}}",
+        "price": {{prix}},
+        "stock": {{stock}},
+        "image_url": "{{$randomUrl}}"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        const stock = Math.floor(Math.random() * 41) + 10;
+        const prix = Math.floor(Math.random() * 81.5) + 20.5;
+
+
+        bru.setCollectionVar("stock",stock);
+        bru.setCollectionVar("prix",prix);
+    - type: after-response
+      code: |-
+        test("verification",()=>{
+          let body_res = res.getBody();
+          let body_req = req.getBody();
+          switch (res.getStatus()) {
+
+          case 201:
+            expect(body_res.product.name).equals(body_req.name);
+            expect(body_res.product.description).equals(body_req.description);
+            expect(body_res.product.price).equals(body_req.price);
+            expect(body_res.product.stock).equals(body_req.stock);
+            expect(body_res.product.image_url).equals(body_req.image_url);
+            break;
+
+          case 403:
+            expect(body_res.message).equals("Accès réservé aux administrateurs.");
+            break;
+
+          default:
+            expect(body_res.success).equals(false);
+            break;
+        }
+        })
+
+        test("code statut",()=>{
+          let tab_code = [201,403];
+          expect(tab_code).to.include(res.getStatus());
+        })
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false

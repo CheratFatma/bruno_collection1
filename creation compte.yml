@@ -1,0 +1,59 @@
+info:
+  name: creation compte
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/public/register"
+  body:
+    type: json
+    data: |-
+      {
+        "name": "{{$randomNamePrefix}}",
+        "email": "{{email}}",
+        "password": "{{password}}",
+        "role": "{{role}}"
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        const role = Math.random < 0.4 ? "user" : "admin";
+        bru.setCollectionVar("role", role);
+
+        const email = bru.interpolate("{{$randomEmail}}");
+        const password = bru.interpolate("{{$randomPassword}}");
+
+        bru.setCollectionVar("email", email);
+        bru.setCollectionVar("password", password);
+    - type: after-response
+      code: |-
+        test("check infos",()=>{
+          let name_req = req.body.name;
+          let name_res = res.body.user.name;
+          
+          let email_req = req.body.email;
+          let email_res = res.body.user.email;
+          
+          let role_req = req.body.role;
+          let role_res = res.body.user.role;
+          
+          expect(name_req).equals(name_res);
+          expect(email_req).equals(email_res);
+          expect(role_req).equals(role_res);
+          expect(res.body.user).to.have.property("id");
+          
+          let body_res = res.getBody();
+          
+          bru.setCollectionVar("id", body_res.user.id)
+        })
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+  forwardAuthorizationHeader: false
