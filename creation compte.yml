@@ -44,6 +44,7 @@ runtime:
           expect(name_req).equals(name_res);
           expect(email_req).equals(email_res);
           expect(role_req).equals(role_res);
+          
           expect(res.body.user).to.have.property("id");
           
           let body_res = res.getBody();
