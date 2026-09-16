@@ -23,11 +23,11 @@ request:
     - name: role
       value: admin
     - name: email
-      value: Eliane.OConnell89@hotmail.com
+      value: Jada_Hayes@hotmail.com
     - name: password
-      value: pNznKnyY5ef0MAm
+      value: 4BKfAwcevC7Xrdv
     - name: token
-      value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyLWFwaSIsInN1YiI6MTk2OCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg5NTYwMTg3LCJleHAiOjE3ODk1NjM3ODcsImp0aSI6ImU0ZDY4MTVkZjA5NmMxOTYzMjU5ZmViNzg1NzNiNTAxIn0.Kv-6tLeRgqrQRfZI2tDHIR8_J5VICRChWJS59yilI1w
+      value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyLWFwaSIsInN1YiI6MTg4Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg5NTYxNjYxLCJleHAiOjE3ODk1NjUyNjEsImp0aSI6IjFjZDY2NjBlOWVkNDdjMzZkNTVhNjY2ZWM0M2FmYjZjIn0.Z1BtmkscfoWfsxUiqpJE9t5bjAbZTAUogiOpg1XJ7HY
     - name: stock
       value:
         type: number

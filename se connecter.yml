@@ -29,6 +29,10 @@ runtime:
           bru.setCollectionVar("token",body_res.token);
         })
 
+        test("check code 200",()=>{
+          expect(res.getStatus()).equals(200);
+        })
+
 settings:
   encodeUrl: true
   timeout: 0

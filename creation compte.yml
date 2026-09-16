@@ -51,6 +51,10 @@ runtime:
           bru.setCollectionVar("id", body_res.user.id)
         })
 
+        test("check code 201",()=>{
+          expect(res.getStatus()).equals(201);
+        })
+
 settings:
   encodeUrl: true
   timeout: 0
