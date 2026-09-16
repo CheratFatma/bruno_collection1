@@ -2,13 +2,6 @@ pipeline {
     agent any
 
     stages {
-
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/CheratFatma/bruno_collection1.git'
-            }
-        }
-
         stage('Install Bruno CLI') {
             steps {
                 bat 'npm install -g @usebruno/cli'
