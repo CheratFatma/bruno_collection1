@@ -19,23 +19,23 @@ request:
     - name: id
       value:
         type: number
-        data: "1934"
+        data: "1968"
     - name: role
       value: admin
     - name: email
-      value: Selena_Kautzer@hotmail.com
+      value: Eliane.OConnell89@hotmail.com
     - name: password
-      value: RBOxwwzblo7g1mq
+      value: pNznKnyY5ef0MAm
     - name: token
-      value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyLWFwaSIsInN1YiI6MTkzNCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg5NTU0MTkxLCJleHAiOjE3ODk1NTc3OTEsImp0aSI6IjAzYzQ4Njg5MTQ4NGEzODVmNzIwNTg1MTYxNDJmNTE5In0.3984-IBtVg9d2JyIoctcSbTKRwcOMRj2il8RXmyizM0
+      value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyLWFwaSIsInN1YiI6MTk2OCwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg5NTYwMTg3LCJleHAiOjE3ODk1NjM3ODcsImp0aSI6ImU0ZDY4MTVkZjA5NmMxOTYzMjU5ZmViNzg1NzNiNTAxIn0.Kv-6tLeRgqrQRfZI2tDHIR8_J5VICRChWJS59yilI1w
     - name: stock
       value:
         type: number
-        data: "12"
+        data: "26"
     - name: prix
       value:
         type: number
-        data: "74.5"
+        data: "58.5"
 bundled: false
 extensions:
   bruno:
