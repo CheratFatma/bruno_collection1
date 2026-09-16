@@ -15,11 +15,9 @@ pipeline {
         }
 
         stage('Run Bruno Tests') {
-            steps {
                 steps {
                     sh 'bru run --env-file ./collections/collection1/environments/preprod.yml --reporter-json results.json --reporter-junit results.xml --reporter-html results.html'
                 }
-            }
         }
 
         stage('Publish Results') {
