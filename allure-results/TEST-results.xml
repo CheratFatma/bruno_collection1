@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<testsuites>
+  <testsuite name="creation compte" file="creation compte.yml" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-09-16T13:25:25.456" hostname="DESKTOP-L2NL3VE" time="0.623">
+    <testcase name="check infos" status="pass" classname="creation compte" time="0.312"/>
+    <testcase name="check code 201" status="pass" classname="creation compte" time="0.312"/>
+  </testsuite>
+  <testsuite name="se connecter " file="se connecter.yml" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-09-16T13:25:25.460" hostname="DESKTOP-L2NL3VE" time="0.433">
+    <testcase name="check infos" status="pass" classname="se connecter" time="0.217"/>
+    <testcase name="check code 200" status="pass" classname="se connecter" time="0.217"/>
+  </testsuite>
+  <testsuite name="ajouter produit" file="ajouter produit.yml" errors="0" failures="0" skipped="0" tests="2" timestamp="2026-09-16T13:25:25.460" hostname="DESKTOP-L2NL3VE" time="0.340">
+    <testcase name="verification" status="pass" classname="ajouter produit" time="0.170"/>
+    <testcase name="verifier les codes statut" status="pass" classname="ajouter produit" time="0.170"/>
+  </testsuite>
+</testsuites>

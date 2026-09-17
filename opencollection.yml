@@ -19,23 +19,23 @@ request:
     - name: id
       value:
         type: number
-        data: "1968"
+        data: "2062"
     - name: role
       value: admin
     - name: email
-      value: Jada_Hayes@hotmail.com
+      value: Shaun_Breitenberg-Kautzer@yahoo.com
     - name: password
-      value: 4BKfAwcevC7Xrdv
+      value: fYx9kJWmJ44YsyP
     - name: token
-      value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyLWFwaSIsInN1YiI6MTg4Nywicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg5NTYxNjYxLCJleHAiOjE3ODk1NjUyNjEsImp0aSI6IjFjZDY2NjBlOWVkNDdjMzZkNTVhNjY2ZWM0M2FmYjZjIn0.Z1BtmkscfoWfsxUiqpJE9t5bjAbZTAUogiOpg1XJ7HY
+      value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ1c2VyLWFwaSIsInN1YiI6MjA2Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzg5NTY1MTI0LCJleHAiOjE3ODk1Njg3MjQsImp0aSI6IjlmZTRkODk2NzRjYzVlNDA3ZWRhMjJhNGVhOGZlODlmIn0.xQnSLkf8b8byGnyRiJqRjNrBzpSFyQDjpN6NwPPTbYU
     - name: stock
       value:
         type: number
-        data: "26"
+        data: "45"
     - name: prix
       value:
         type: number
-        data: "58.5"
+        data: "63.5"
 bundled: false
 extensions:
   bruno:
