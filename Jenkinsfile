@@ -58,12 +58,7 @@ pipeline {
                             if (params.ALLURE) {
 
                                 sh '''
-                                    echo "Exécution des tests Bruno avec Allure..."
-
-                                    bru run ./collections/collection1 \
-                                        --env-file ./collections/collection1/environments/preprod.yml \
-                                        --reporter-json results.json \
-                                        --reporter-junit results.xml
+                                    bru run --env-file ./environments/preprod.yml --reporter-json results.json --reporter-junit results.xml
                                 '''
 
                                 stash(
@@ -77,8 +72,7 @@ pipeline {
                                 sh '''
                                     echo "Exécution des tests Bruno..."
 
-                                    bru run ./collections/collection1 \
-                                        --env-file ./collections/collection1/environments/preprod.yml
+                                    bru run --env-file ./environments/preprod.yml
                                 '''
                             }
                         }

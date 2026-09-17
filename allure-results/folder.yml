@@ -1,0 +1,6 @@
+info:
+  name: allure-results
+  type: folder
+  seq: 1
+
+request: {}
